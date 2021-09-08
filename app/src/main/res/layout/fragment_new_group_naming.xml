@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/group_listtoolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/header"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        app:title="New Group"
+        app:titleTextColor="@color/yellow"></androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="10dp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/groupprofilepic"
+                android:layout_width="50sp"
+                android:layout_height="50sp"
+                android:layout_centerInParent="true"
+                android:layout_gravity="left"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/profile"
+                app:riv_corner_radius="30dp"></com.makeramen.roundedimageview.RoundedImageView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+
+            <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                android:id="@+id/emojicon_group"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="5dp"
+                android:layout_weight="9.7"
+                android:backgroundTint="@android:color/transparent"
+                android:hint="Type group subject..."
+                android:imeOptions="actionSend"
+                android:inputType="text"
+                android:textColor="@color/white"
+                android:textColorHint="@color/textblack2"
+
+                android:textSize="15sp"
+
+                />
+
+            <ImageView
+                android:id="@+id/emoji_imageview"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentBottom="true"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:padding="7dp"
+                android:src="@drawable/smiley"
+                android:tint="@color/yellow" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:text="Provide a group subject and optional group icon."
+            android:textColor="@color/white"
+            android:textSize="14dp"></TextView>
+
+        <ImageButton
+            android:id="@+id/create_group"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="25dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/buttonbg"
+            android:padding="10dp"
+            android:src="@drawable/ic_done_all_black_24dp"
+            android:tint="@color/white"></ImageButton>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_margin="10dp"
+            android:background="@color/yellow"></View>
+
+        <TextView
+            android:id="@+id/number_of_members"
+            android:layout_width="wrap_content"
+            android:textColor="@color/yellow"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"></TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/selected_members"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"></androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+    </LinearLayout>
+        <include layout="@layout/progress_bar"></include>
+    </RelativeLayout>
+</LinearLayout>
+
+

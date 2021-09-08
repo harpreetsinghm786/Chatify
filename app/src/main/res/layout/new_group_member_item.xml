@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_margin="10sp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="50dp"
+        android:layout_height="50dp">
+        <com.makeramen.roundedimageview.RoundedImageView
+            android:id="@+id/profilepic"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:src="@mipmap/profile"
+            android:layout_gravity="left"
+            android:scaleType="centerCrop"
+            android:layout_centerInParent="true"
+            app:riv_corner_radius="30dp"></com.makeramen.roundedimageview.RoundedImageView>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            >
+
+            <ImageView
+                android:layout_width="18dp"
+                android:layout_height="18dp"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="2dp"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+                android:id="@+id/unchecked"
+                android:layout_marginBottom="2dp"
+                android:tint="@color/textblack3"
+                android:src="@drawable/ic_add_circle_black_24dp"
+                android:rotation="45"
+                style="pop"></ImageView>
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/username"
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="shsdihsiodhs"
+            android:textColor="@color/yellow"
+            android:textSize="12sp"></TextView>
+
+    </LinearLayout>
+
+
+</LinearLayout>

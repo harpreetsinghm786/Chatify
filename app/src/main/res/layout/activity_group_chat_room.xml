@@ -1,0 +1,205 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:emojicon="http://schemas.android.com/apk/res-auto"
+    android:background="@color/main"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:elevation="15dp">
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/chatroom_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:background="@drawable/header"
+                    app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+                    app:title=" "
+                    app:titleTextColor="@color/yellow"></androidx.appcompat.widget.Toolbar>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="?attr/actionBarSize"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.makeramen.roundedimageview.RoundedImageView
+                        android:id="@+id/groupicon"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:layout_marginLeft="50dp"
+                        android:scaleType="centerCrop"
+                        android:src="@mipmap/profile"
+                        app:riv_corner_radius="40dp"></com.makeramen.roundedimageview.RoundedImageView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/groupname"
+                            android:singleLine="true"
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/yellow"
+                            android:textSize="15sp"
+                            android:text="Group name"
+                            android:textStyle="bold"></TextView>
+
+                        <RelativeLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/group_members"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="2dp"
+                                android:text="group members"
+                                android:textSize="12sp"
+                                android:singleLine="true"
+                                android:textColor="@color/white"
+                                ></TextView>
+
+                            <TextView
+                                android:id="@+id/typing"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="5dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/white"
+                                android:text="Typing..."
+                                android:textColor="@color/white"
+                                android:textSize="12sp"
+                                android:visibility="gone"></TextView>
+
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/chatroom_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="58dp"></androidx.recyclerview.widget.RecyclerView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_alignParentBottom="true"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="10">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="0dp"
+                            android:layout_height="45dp"
+                            android:layout_marginLeft="5dp"
+                            android:layout_marginRight="5dp"
+                            android:layout_weight="8.7"
+                            app:cardBackgroundColor="@color/main_hard"
+                            app:cardCornerRadius="25dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="horizontal"
+                                android:weightSum="10"
+                                android:id="@+id/root_view">
+
+                                <ImageView
+                                    android:id="@+id/emoji_btn"
+                                    android:layout_width="40dp"
+                                    android:layout_gravity="center"
+                                    android:layout_height="40dp"
+                                    android:tint="@color/yellow"
+                                    android:layout_marginLeft="2dp"
+                                    android:src="@drawable/ic_sentiment_satisfied_black_24dp"
+                                    android:layout_alignParentBottom="true"
+                                    android:layout_alignParentLeft="true"
+                                    android:padding="7dp"
+                                    />
+
+                                <hani.momanii.supernova_emoji_library.Helper.EmojiconEditText
+                                    android:id="@+id/emojicon_edit_text"
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentBottom="true"
+                                    android:textColor="@color/white"
+                                    android:singleLine="false"
+                                    android:textSize="16sp"
+                                    android:textColorHint="@color/textblack2"
+                                    android:layout_toRightOf="@id/emoji_btn"
+                                    android:layout_weight="8.7"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:imeOptions="actionSend"
+                                    android:inputType="text"
+                                    android:hint="Type a message.."
+                                    emojicon:emojiconSize="20sp" />
+
+
+                                <ImageButton
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1.3"
+                                    android:backgroundTint="@android:color/transparent"
+                                    android:src="@drawable/ic_attachment_black_24dp"
+                                    android:tint="@color/yellow"
+                                    android:visibility="gone"
+                                    android:layout_marginRight="2dp"
+                                    android:rotation="-45"></ImageButton>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.3">
+
+                            <ImageButton
+                                android:id="@+id/send"
+                                android:layout_width="45dp"
+                                android:layout_height="45dp"
+                                android:background="@drawable/send"
+                                android:src="@drawable/ic_send_black_24dp"
+                                android:tint="@color/white"
+                                ></ImageButton>
+
+
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <include layout="@layout/progress_bar"></include>
+    </RelativeLayout>
+</LinearLayout>

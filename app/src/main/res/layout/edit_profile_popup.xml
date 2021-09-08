@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="bottom"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="bottom"
+        android:background="@color/glass">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/drawer"
+            android:elevation="10dp"
+            android:background="@drawable/footer">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_margin="10dp"
+                >
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="top"
+                    android:layout_gravity="top"
+                    android:layout_margin="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:text="Enter your name"
+                        android:singleLine="false"
+                        android:id="@+id/heading"
+                        android:gravity="left"
+                        android:textColor="@color/yellow"
+                        ></TextView>
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="16sp"
+                        android:id="@+id/edited_text"
+                        android:singleLine="false"
+                        android:gravity="left"
+                        android:backgroundTint="@color/yellow"
+                        android:textColor="@color/white"
+                        android:layout_marginTop="10dp"
+                        ></EditText>
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="right"
+                android:layout_marginBottom="5dp"
+                android:id="@+id/remove_from_wishlist"
+                android:weightSum="10">
+
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:backgroundTint="@color/main"
+                    android:gravity="center"
+                    android:textAllCaps="false"
+                    android:id="@+id/cancel"
+                    android:textColor="@color/yellow"
+                    android:layout_height="wrap_content"
+                    android:text="Cancel"></Button>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:gravity="center"
+                    android:id="@+id/save"
+                    android:backgroundTint="@color/main"
+                    android:textAllCaps="false"
+                    android:layout_marginRight="5dp"
+                    android:textColor="@color/yellow"
+                    android:layout_height="wrap_content"
+                    android:text="Save"></Button>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

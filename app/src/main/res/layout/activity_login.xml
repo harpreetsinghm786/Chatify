@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".login"
+    android:gravity="center"
+    android:weightSum="10"
+    android:orientation="vertical"
+    android:background="@color/main">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@drawable/header"
+        android:orientation="horizontal"
+        android:elevation="20dp"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@mipmap/logo"
+            ></ImageView>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Chatify"
+                android:textSize="25dp"
+                android:layout_marginLeft="90dp"
+                android:textStyle="bold"
+                android:textColor="@color/yellow"
+                android:fontFamily="casual"></TextView>
+        </LinearLayout>
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@mipmap/mobile"
+            android:layout_marginBottom="10dp"
+            ></ImageView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Login with Mobile Number"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:textColor="@color/yellow"></TextView>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Enter your mobile number and we will send \n you OTP to verify."
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="10sp"
+            ></TextView>
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+          android:layout_marginRight="30sp"
+            android:layout_marginLeft="30sp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:orientation="horizontal">
+            <com.hbb20.CountryCodePicker
+                android:id="@+id/cpp"
+                android:layout_width="40sp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10sp"
+                app:ccpDialog_backgroundColor="@color/main_hard"
+                android:layout_marginTop="2sp"
+                app:ccp_showPhoneCode="true"
+                app:ccpDialog_textColor="@color/white"
+                app:ccp_contentColor="@color/white"></com.hbb20.CountryCodePicker>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/white"
+                android:gravity="center"
+                android:backgroundTint="@android:color/transparent"
+                >
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="15sp"
+                    android:id="@+id/phonenumber"
+                    android:inputType="phone"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@android:color/transparent"
+                    android:hint="Phone number"
+                    android:textColorHint="@color/white"
+                    ></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+</LinearLayout>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20sp"
+            android:layout_marginRight="20sp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/buttonbg"
+            android:text="Continue"
+            android:id="@+id/next"
+            android:textAllCaps="false"
+            android:textColor="@color/main"></Button>
+    </LinearLayout>
+</LinearLayout>

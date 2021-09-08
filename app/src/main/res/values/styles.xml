@@ -1,0 +1,27 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="mytheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/main_hard</item>
+        <item name="android:windowBackground">@color/main_hard</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">false</item>
+        <item name="colorAccent">@color/yellow</item>
+         <item name="android:windowIsTranslucent">true</item>
+         <item name="android:navigationBarColor" tools:targetApi="lollipop">@color/main_hard</item>
+        <item name="android:windowContentTransitions" tools:targetApi="lollipop">true</item>
+    </style>
+
+    <style name="date" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/yellow</item>
+    </style>
+
+
+
+  =
+
+
+
+
+</resources>
